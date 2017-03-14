@@ -133,3 +133,16 @@ php artisan vendor:publish --tag=lfm_public
 最后在页面中引用
 @include('partials.filemanager')
 ```
+
+##### 4.使用laravel debug
+1.composer require barryvdh/laravel-debugbar
+2.app.php中
+```
+Barryvdh\Debugbar\ServiceProvider::class,
+'Debugbar' => Barryvdh\Debugbar\Facade::class,
+```
+3.发布资源
+php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
+
+### 2.开始cms分支(主要参照fullycms)
+> https://github.com/sseffa/fullcms.git 
