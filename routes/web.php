@@ -21,3 +21,21 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::get('/seo','SEOController@index');
+
+Route::resource('revisions', 'RevisionController');
+
+Route::resource('messengerThreads', 'MessengerThreadController');
+
+Route::resource('messages', 'MessageController');
+
+Route::resource('participants', 'ParticipantController');
+
+Route::resource('settings', 'SettingController');
+
+Route::resource('adspaces', 'AdspaceController');
+
+Route::resource('advertisements', 'AdvertisementController');
+
+Route::resource('pages', 'PageController');
+
+Route::resource('stats', 'StatController');
