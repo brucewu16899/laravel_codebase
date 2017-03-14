@@ -21,3 +21,20 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::get('/seo','SEOController@index');
+
+
+Route::resource('articles', 'ArticleController');
+Route::resource('pages', 'PageController');
+Route::resource('photoGalleries', 'PhotoGalleryController');
+Route::resource('photos', 'PhotoController');
+Route::resource('formPosts', 'FormPostController');
+Route::resource('tags', 'TagController');
+Route::resource('articlesTags', 'ArticlesTagController');
+Route::resource('settings', 'SettingController');
+Route::resource('categories', 'CategoryController');
+Route::resource('news', 'NewsController');
+Route::resource('sliders', 'SliderController');
+Route::resource('menus', 'MenusController');
+Route::resource('faqs', 'FaqController');
+Route::resource('projects', 'ProjectController');
+Route::resource('videos', 'VideoController');

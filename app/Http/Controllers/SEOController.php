@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Fully\Http\Controllers;
 
 use Artesaos\SEOTools\SEOMeta;
 use Illuminate\Http\Request;
