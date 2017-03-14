@@ -239,4 +239,8 @@ Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
         'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
 ```
 3.php artisan vendor:publish 
-4.
+4.示例在SEOController中
+
+### 12.iseed和migration(玩别人项目的时候用得上)
+https://github.com/orangehill/iseed
+https://github.com/Xethron/migrations-generator
