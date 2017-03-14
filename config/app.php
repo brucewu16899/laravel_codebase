@@ -176,6 +176,13 @@ return [
         \InfyOm\AdminLTETemplates\AdminLTETemplatesServiceProvider::class,
         Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        Arcanedev\LogViewer\LogViewerServiceProvider::class,
+        Asvae\ApiTester\ServiceProvider::class,
+        Sven\ArtisanView\ArtisanViewServiceProvider::class,
+        Mews\Captcha\CaptchaServiceProvider::class,
+        Cviebrock\EloquentSluggable\ServiceProvider::class,
+        DaveJamesMiller\Breadcrumbs\ServiceProvider::class,
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -238,6 +245,10 @@ return [
         'Flash'     => Laracasts\Flash\Flash::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Captcha' => Mews\Captcha\Facades\Captcha::class,
+        'Breadcrumbs' => DaveJamesMiller\Breadcrumbs\Facade::class,
+        'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
+
     ],
 
 ];

@@ -1,5 +1,5 @@
-### 1.集成通用package
-##### 1.idea-helper
+## 1.集成通用package
+### 1.idea-helper
 1.composer require –dev barryvdh/laravel-ide-helper 
 2.app.php中增加 Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class, 
 3.composer.json中增加命令
@@ -14,7 +14,7 @@
 }
 ```
 
-##### 2.使用generator加快开发
+### 2.使用generator加快开发
 1.composer.json中新增
 ```
 "infyomlabs/laravel-generator": "5.3.x-dev",
@@ -44,7 +44,7 @@ php artisan infyom:scaffold $MODEL_NAME
 php artisan infyom:api_scaffold $MODEL_NAME 
 ```
 
-##### 3.集成图片浏览上传和编辑器
+### 3.集成图片浏览上传和编辑器
 1.集成编辑器 composer require unisharp/laravel-filemanager
 2.配置app.php
 ```
@@ -134,7 +134,7 @@ php artisan vendor:publish --tag=lfm_public
 @include('partials.filemanager')
 ```
 
-##### 4.使用laravel debug
+### 4.使用laravel debug
 1.composer require barryvdh/laravel-debugbar
 2.app.php中
 ```
@@ -144,5 +144,99 @@ Barryvdh\Debugbar\ServiceProvider::class,
 3.发布资源
 php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
 
-### 2.开始cms分支(主要参照fullycms)
-> https://github.com/sseffa/fullcms.git 
+### 5.使用LogViewer
+>https://github.com/ARCANEDEV/LogViewer/ 
+
+1.composer require arcanedev/log-viewer
+2.在app.php中
+```
+Arcanedev\LogViewer\LogViewerServiceProvider::class,
+```
+3.发布资源 
+`php artisan vendor:publish`
+4.进入logviewer
+`http://my_website_url/log-viewer`
+
+### 6.像postman一样测试自己的接口
+>https://github.com/asvae/laravel-api-tester
+
+1.composer require asvae/laravel-api-tester
+2.在app.php中
+```
+Asvae\ApiTester\ServiceProvider::class,
+```
+3.发布资源
+`php artisan vendor:publish`
+4.进入页面
+`http://my_website_url/api-tester`
+
+### 7.使用make:view命令
+>https://github.com/svenluijten/artisan-view 
+
+1.composer require sven/artisan-view
+2.在app.php中
+```
+ Sven\ArtisanView\ArtisanViewServiceProvider::class,
+```
+3.示例
+```
+php artisan make:view index
+php artisan make:view products --resource --extends=layout --sections=foo,bar
+php artisan scrap:view index   #干掉一个view
+```
+
+### 8.使用验证码
+>https://github.com/mewebstudio/captcha
+
+1.composer require mews/captcha
+2.在app.php中
+```
+ Mews\Captcha\CaptchaServiceProvider::class,
+ 'Captcha' => Mews\Captcha\Facades\Captcha::class,
+```
+3.发布资源
+php artisan vendor:publish
+
+### 9.实现slug(对SEO,用户友好)
+> https://github.com/cviebrock/eloquent-sluggable
+
+1.composer require cviebrock/eloquent-sluggable
+2. Cviebrock\EloquentSluggable\ServiceProvider::class,
+3.php artisan vendor:publish 
+
+### 10.实现面包屑
+> https://laravel-breadcrumbs.readthedocs.io/en/latest/start.html#install-laravel-breadcrumbs
+
+1.composer require davejamesmiller/laravel-breadcrumbs
+2.在app.php中
+```
+DaveJamesMiller\Breadcrumbs\ServiceProvider::class,
+'Breadcrumbs' => DaveJamesMiller\Breadcrumbs\Facade::class,
+```
+3.新建routes/breadcrumbs.php
+```
+一些代码
+```
+4.php artisan vendor:publish 
+5.使用面包屑
+```
+{!! Breadcrumbs::render('home') !!}
+{!! Breadcrumbs::render('category', $category) !!}
+```
+
+### 11.SEO工具
+> https://github.com/artesaos/seotools
+
+1.composer require artesaos/seotools
+2.在app.php中
+```
+Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+
+'       SEOMeta'   => Artesaos\SEOTools\Facades\SEOMeta::class,
+        'OpenGraph' => Artesaos\SEOTools\Facades\OpenGraph::class,
+        'Twitter'   => Artesaos\SEOTools\Facades\TwitterCard::class,
+        // or
+        'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
+```
+3.php artisan vendor:publish 
+4.
