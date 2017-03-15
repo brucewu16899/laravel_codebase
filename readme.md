@@ -87,7 +87,12 @@ composer require "overtrue/laravel-pinyin:~3.0"
 ```
 后台可以用id,前台还是用slug好.
 
-### 7.
+### 8.cms总结
+1.mvc的curd
+2.图片上传,富文本编辑器,时间处理,slug
+3.好像没了.
+
+
 
 
 
