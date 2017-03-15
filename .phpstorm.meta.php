@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2017-03-14.
+    * Generated on 2017-03-15.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -69,7 +69,6 @@ namespace PHPSTORM_META {
             'Arcanedev\LogViewer\Contracts\Utilities\Factory' instanceof \Arcanedev\LogViewer\Utilities\Factory,
             'Arcanedev\LogViewer\Contracts\Utilities\LogChecker' instanceof \Arcanedev\LogViewer\Utilities\LogChecker,
             'Arcanedev\LogViewer\Contracts\LogViewer' instanceof \Arcanedev\LogViewer\LogViewer,
-            'Asvae\ApiTester\Contracts\RouteRepositoryInterface' instanceof \Asvae\ApiTester\Repositories\RouteRepository,
             'Asvae\ApiTester\Contracts\RequestRepositoryInterface' instanceof \Asvae\ApiTester\Repositories\RequestRepository,
             'Asvae\ApiTester\Contracts\StorageInterface' instanceof \Asvae\ApiTester\Storages\JsonStorage,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
@@ -166,6 +165,14 @@ namespace PHPSTORM_META {
             'command.ide-helper.meta' instanceof \Barryvdh\LaravelIdeHelper\Console\MetaCommand,
             'html' instanceof \Collective\Html\HtmlBuilder,
             'form' instanceof \Collective\Html\FormBuilder,
+            'seotools.metatags' instanceof \Artesaos\SEOTools\SEOMeta,
+            'seotools.opengraph' instanceof \Artesaos\SEOTools\OpenGraph,
+            'seotools.twitter' instanceof \Artesaos\SEOTools\TwitterCards,
+            'seotools' instanceof \Artesaos\SEOTools\SEOTools,
+            'Artesaos\SEOTools\Contracts\MetaTags' instanceof \Artesaos\SEOTools\SEOMeta,
+            'Artesaos\SEOTools\Contracts\OpenGraph' instanceof \Artesaos\SEOTools\OpenGraph,
+            'Artesaos\SEOTools\Contracts\TwitterCards' instanceof \Artesaos\SEOTools\TwitterCards,
+            'Artesaos\SEOTools\Contracts\SEOTools' instanceof \Artesaos\SEOTools\SEOTools,
         ],
         \Illuminate\Contracts\Container\Container::make('') => [
             '' == '@',
@@ -227,7 +234,6 @@ namespace PHPSTORM_META {
             'Arcanedev\LogViewer\Contracts\Utilities\Factory' instanceof \Arcanedev\LogViewer\Utilities\Factory,
             'Arcanedev\LogViewer\Contracts\Utilities\LogChecker' instanceof \Arcanedev\LogViewer\Utilities\LogChecker,
             'Arcanedev\LogViewer\Contracts\LogViewer' instanceof \Arcanedev\LogViewer\LogViewer,
-            'Asvae\ApiTester\Contracts\RouteRepositoryInterface' instanceof \Asvae\ApiTester\Repositories\RouteRepository,
             'Asvae\ApiTester\Contracts\RequestRepositoryInterface' instanceof \Asvae\ApiTester\Repositories\RequestRepository,
             'Asvae\ApiTester\Contracts\StorageInterface' instanceof \Asvae\ApiTester\Storages\JsonStorage,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
@@ -324,6 +330,14 @@ namespace PHPSTORM_META {
             'command.ide-helper.meta' instanceof \Barryvdh\LaravelIdeHelper\Console\MetaCommand,
             'html' instanceof \Collective\Html\HtmlBuilder,
             'form' instanceof \Collective\Html\FormBuilder,
+            'seotools.metatags' instanceof \Artesaos\SEOTools\SEOMeta,
+            'seotools.opengraph' instanceof \Artesaos\SEOTools\OpenGraph,
+            'seotools.twitter' instanceof \Artesaos\SEOTools\TwitterCards,
+            'seotools' instanceof \Artesaos\SEOTools\SEOTools,
+            'Artesaos\SEOTools\Contracts\MetaTags' instanceof \Artesaos\SEOTools\SEOMeta,
+            'Artesaos\SEOTools\Contracts\OpenGraph' instanceof \Artesaos\SEOTools\OpenGraph,
+            'Artesaos\SEOTools\Contracts\TwitterCards' instanceof \Artesaos\SEOTools\TwitterCards,
+            'Artesaos\SEOTools\Contracts\SEOTools' instanceof \Artesaos\SEOTools\SEOTools,
         ],
         \App::make('') => [
             '' == '@',
@@ -385,7 +399,6 @@ namespace PHPSTORM_META {
             'Arcanedev\LogViewer\Contracts\Utilities\Factory' instanceof \Arcanedev\LogViewer\Utilities\Factory,
             'Arcanedev\LogViewer\Contracts\Utilities\LogChecker' instanceof \Arcanedev\LogViewer\Utilities\LogChecker,
             'Arcanedev\LogViewer\Contracts\LogViewer' instanceof \Arcanedev\LogViewer\LogViewer,
-            'Asvae\ApiTester\Contracts\RouteRepositoryInterface' instanceof \Asvae\ApiTester\Repositories\RouteRepository,
             'Asvae\ApiTester\Contracts\RequestRepositoryInterface' instanceof \Asvae\ApiTester\Repositories\RequestRepository,
             'Asvae\ApiTester\Contracts\StorageInterface' instanceof \Asvae\ApiTester\Storages\JsonStorage,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
@@ -482,6 +495,14 @@ namespace PHPSTORM_META {
             'command.ide-helper.meta' instanceof \Barryvdh\LaravelIdeHelper\Console\MetaCommand,
             'html' instanceof \Collective\Html\HtmlBuilder,
             'form' instanceof \Collective\Html\FormBuilder,
+            'seotools.metatags' instanceof \Artesaos\SEOTools\SEOMeta,
+            'seotools.opengraph' instanceof \Artesaos\SEOTools\OpenGraph,
+            'seotools.twitter' instanceof \Artesaos\SEOTools\TwitterCards,
+            'seotools' instanceof \Artesaos\SEOTools\SEOTools,
+            'Artesaos\SEOTools\Contracts\MetaTags' instanceof \Artesaos\SEOTools\SEOMeta,
+            'Artesaos\SEOTools\Contracts\OpenGraph' instanceof \Artesaos\SEOTools\OpenGraph,
+            'Artesaos\SEOTools\Contracts\TwitterCards' instanceof \Artesaos\SEOTools\TwitterCards,
+            'Artesaos\SEOTools\Contracts\SEOTools' instanceof \Artesaos\SEOTools\SEOTools,
         ],
         \app('') => [
             '' == '@',
@@ -543,7 +564,6 @@ namespace PHPSTORM_META {
             'Arcanedev\LogViewer\Contracts\Utilities\Factory' instanceof \Arcanedev\LogViewer\Utilities\Factory,
             'Arcanedev\LogViewer\Contracts\Utilities\LogChecker' instanceof \Arcanedev\LogViewer\Utilities\LogChecker,
             'Arcanedev\LogViewer\Contracts\LogViewer' instanceof \Arcanedev\LogViewer\LogViewer,
-            'Asvae\ApiTester\Contracts\RouteRepositoryInterface' instanceof \Asvae\ApiTester\Repositories\RouteRepository,
             'Asvae\ApiTester\Contracts\RequestRepositoryInterface' instanceof \Asvae\ApiTester\Repositories\RequestRepository,
             'Asvae\ApiTester\Contracts\StorageInterface' instanceof \Asvae\ApiTester\Storages\JsonStorage,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
@@ -640,6 +660,14 @@ namespace PHPSTORM_META {
             'command.ide-helper.meta' instanceof \Barryvdh\LaravelIdeHelper\Console\MetaCommand,
             'html' instanceof \Collective\Html\HtmlBuilder,
             'form' instanceof \Collective\Html\FormBuilder,
+            'seotools.metatags' instanceof \Artesaos\SEOTools\SEOMeta,
+            'seotools.opengraph' instanceof \Artesaos\SEOTools\OpenGraph,
+            'seotools.twitter' instanceof \Artesaos\SEOTools\TwitterCards,
+            'seotools' instanceof \Artesaos\SEOTools\SEOTools,
+            'Artesaos\SEOTools\Contracts\MetaTags' instanceof \Artesaos\SEOTools\SEOMeta,
+            'Artesaos\SEOTools\Contracts\OpenGraph' instanceof \Artesaos\SEOTools\OpenGraph,
+            'Artesaos\SEOTools\Contracts\TwitterCards' instanceof \Artesaos\SEOTools\TwitterCards,
+            'Artesaos\SEOTools\Contracts\SEOTools' instanceof \Artesaos\SEOTools\SEOTools,
         ],
     ];
 }
