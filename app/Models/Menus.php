@@ -56,5 +56,7 @@ class Menus extends Model
         'lang' => 'exit'
     ];
 
-    
+    public function getFrontMenuHTML(){
+        return '还没有数据';
+    }
 }

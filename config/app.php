@@ -192,6 +192,8 @@ return [
         Fully\Providers\EventServiceProvider::class,
         Fully\Providers\RouteServiceProvider::class,
 
+        //自定义ServiceProvider
+        Fully\Providers\ComposerServiceProvider::class,
     ],
 
     /*
