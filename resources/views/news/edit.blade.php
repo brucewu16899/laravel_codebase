@@ -12,12 +12,18 @@
            <div class="box-body">
                <div class="row">
                    {!! Form::model($news, ['route' => ['news.update', $news->id], 'method' => 'patch']) !!}
-
                         @include('news.fields')
-
                    {!! Form::close() !!}
                </div>
            </div>
        </div>
    </div>
+@endsection
+
+
+@section('scripts')
+    @include('partials.datepicker')
+    @include('partials.tinymce')
+    @include('partials.imagefile')
+
 @endsection

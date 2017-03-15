@@ -2,6 +2,7 @@
 
 namespace Fully\Http\Controllers;
 
+use Carbon\Carbon;
 use Fully\Http\Requests\CreateNewsRequest;
 use Fully\Http\Requests\UpdateNewsRequest;
 use Fully\Repositories\NewsRepository;
@@ -30,7 +31,7 @@ class NewsController extends AppBaseController
     public function index(Request $request)
     {
         $this->newsRepository->pushCriteria(new RequestCriteria($request));
-        $news = $this->newsRepository->all();
+        $news = $this->newsRepository->paginate(2);
 
         return view('news.index')
             ->with('news', $news);
@@ -55,10 +56,19 @@ class NewsController extends AppBaseController
      */
     public function store(CreateNewsRequest $request)
     {
+        //处理一下时间,将字符串转成时间戳
+//        $request->datetime = Carbon::now()->toDateTimeString();
+//        dd($request);
         $input = $request->all();
 
+//        $input['datetime'] = Carbon::now()->toDateTimeString();
+//        $input['datetime'] = Carbon::createFromDate($request->datetime)->toDateTimeString();
+        $input['lang'] = 'zh';
+//        dd($input['title']);
+//        dd(pinyin($input['title']));
+        $input['slug'] = implode('-',pinyin($input['title']));
+//        dd($input['slug']);
         $news = $this->newsRepository->create($input);
-
         Flash::success('News saved successfully.');
 
         return redirect(route('news.index'));
@@ -94,7 +104,6 @@ class NewsController extends AppBaseController
     public function edit($id)
     {
         $news = $this->newsRepository->findWithoutFail($id);
-
         if (empty($news)) {
             Flash::error('News not found');
 
@@ -115,15 +124,13 @@ class NewsController extends AppBaseController
     public function update($id, UpdateNewsRequest $request)
     {
         $news = $this->newsRepository->findWithoutFail($id);
-
+//        dd($news);
         if (empty($news)) {
             Flash::error('News not found');
-
             return redirect(route('news.index'));
         }
 
         $news = $this->newsRepository->update($request->all(), $id);
-
         Flash::success('News updated successfully.');
 
         return redirect(route('news.index'));

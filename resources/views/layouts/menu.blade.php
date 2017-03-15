@@ -3,14 +3,15 @@
     <a href="{!! route('news.index') !!}"><i class="fa fa-edit"></i><span>News</span></a>
 </li>
 
+<li class="{{ Request::is('pages*') ? 'active' : '' }}">
+    <a href="{!! route('pages.index') !!}"><i class="fa fa-edit"></i><span>Pages</span></a>
+</li>
 
 <li class="{{ Request::is('articles*') ? 'active' : '' }}">
     <a href="{!! route('articles.index') !!}"><i class="fa fa-edit"></i><span>Articles</span></a>
 </li>
 
-<li class="{{ Request::is('pages*') ? 'active' : '' }}">
-    <a href="{!! route('pages.index') !!}"><i class="fa fa-edit"></i><span>Pages</span></a>
-</li>
+
 
 <li class="{{ Request::is('photoGalleries*') ? 'active' : '' }}">
     <a href="{!! route('photoGalleries.index') !!}"><i class="fa fa-edit"></i><span>PhotoGalleries</span></a>

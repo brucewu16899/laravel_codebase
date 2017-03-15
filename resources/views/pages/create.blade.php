@@ -14,11 +14,15 @@
                 <div class="row">
                     {!! Form::open(['route' => 'pages.store']) !!}
 
-                        @include('pages.fields')
+                    @include('pages.fields')
 
                     {!! Form::close() !!}
                 </div>
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    @include('partials.tinymce')
 @endsection

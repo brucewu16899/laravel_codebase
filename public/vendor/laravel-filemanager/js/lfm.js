@@ -13,7 +13,7 @@
       var route_prefix = (options && options.prefix) ? options.prefix : '/laravel-filemanager';
       localStorage.setItem('target_input', $(this).data('input'));
       localStorage.setItem('target_preview', $(this).data('preview'));
-      window.open(route_prefix + '?type=' + type, 'FileManager', 'width=900,height=600');
+      window.open(route_prefix + '?type=' + type, '文件管理器', 'top=300,left=300,width=1200,height=600');
       return false;
     });
   }

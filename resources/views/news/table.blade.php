@@ -18,7 +18,7 @@
             <td>{!! $news->content !!}</td>
             <td>{!! $news->slug !!}</td>
             <td>{!! $news->datetime !!}</td>
-            <td>{!! $news->is_published !!}</td>
+            <td>{!! $news->is_published ?1:0 !!}</td>
             <td>{!! $news->path !!}</td>
             <td>{!! $news->file_name !!}</td>
             <td>{!! $news->file_size !!}</td>

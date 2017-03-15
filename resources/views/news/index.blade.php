@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    {{!! Breadcrumbs::render('news') !!}}
+    {!! Breadcrumbs::render('news') !!}
     <section class="content-header">
         <h1 class="pull-left">News</h1>
         <h1 class="pull-right">
@@ -20,5 +20,8 @@
             </div>
         </div>
     </div>
+
+    {{ $news->links() }}
+
 @endsection
 

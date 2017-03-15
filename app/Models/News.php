@@ -2,6 +2,8 @@
 
 namespace Fully\Models;
 
+use Cocur\Slugify\SlugifyInterface;
+use Cviebrock\EloquentSluggable\Sluggable;
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -13,6 +15,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class News extends Model
 {
     use SoftDeletes;
+    use Sluggable;
 
     public $table = 'news';
     
@@ -41,7 +44,7 @@ class News extends Model
         'title' => 'string',
         'content' => 'string',
         'slug' => 'string',
-        'datetime' => 'date',
+        'datetime' => 'string',
         'is_published' => 'boolean',
         'path' => 'string',
         'file_name' => 'string',
@@ -55,9 +58,20 @@ class News extends Model
      * @var array
      */
     public static $rules = [
-        'title' => 'content text textarea',
-        'lang' => 'exit'
+        'title' => 'string',
     ];
 
-    
+    /**
+     * Return the sluggable configuration array for this model.
+     *
+     * @return array
+     */
+    public function sluggable()
+    {
+        return [
+            'slug'=>[
+                'source'=>'title'
+            ]
+        ];
+    }
 }

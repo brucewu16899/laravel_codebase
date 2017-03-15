@@ -183,6 +183,8 @@ return [
         Cviebrock\EloquentSluggable\ServiceProvider::class,
         DaveJamesMiller\Breadcrumbs\ServiceProvider::class,
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+        Overtrue\LaravelPinyin\ServiceProvider::class,
+
         /*
          * Application Service Providers...
          */
@@ -253,6 +255,7 @@ return [
         'OpenGraph' => Artesaos\SEOTools\Facades\OpenGraph::class,
         'Twitter'   => Artesaos\SEOTools\Facades\TwitterCard::class,
         'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
+        'Pinyin' => Overtrue\LaravelPinyin\Facades\Pinyin::class,
     ],
 
 ];
